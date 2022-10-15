@@ -57,6 +57,7 @@ public class Facade{
 
     public Product SelectProduct(){
 
+        return null;
     }
 
     public void productOperation(){
