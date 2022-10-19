@@ -1,11 +1,12 @@
 public class Buyer extends Person {
 
     Buyer(){
+        super();
 
     }
 
-    Buyer(ProductMenu theProductMenu){
-
+    Buyer(ProductMenu theProductMenu) {
+        super(theProductMenu);
     }
 
     @Override
@@ -15,7 +16,7 @@ public class Buyer extends Person {
     }
 
     @Override
-    public ProductMenu creatProductMenu() {
+    public ProductMenu createProductMenu() {
         // TODO Auto-generated method stub
         return null;
     }

@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.Iterator;
 
@@ -10,20 +12,24 @@ import java.util.Iterator;
 public class Facade{
     int UserType;
     int nProductCategory;
-    Product theSelectedProduct;
-    ClassProductList theProductList;
-    Person thePerson;
+    Product theSelectedProduct = new Product();
+    ClassProductList theProductList= new ClassProductList();
+    Person thePerson ;
 
-    public boolean login(){
-        return false;
+    public boolean login(Login object) throws FileNotFoundException {
+
+        int UserType = object.login();
+        if(UserType==1)
+            thePerson = new Buyer();
+        else
+            return false;
+    }
+
+    public void addTrading(TradingMenu tM){
 
     }
 
-    public void addTrading(){
-
-    }
-
-    public void viewTrading(){
+    public void viewTrading(TradingMenu tM){
 
     }
 
@@ -47,20 +53,20 @@ public class Facade{
 
     }
 
-    public void createProductList(){
+    public void createProductList(ProductMenu pM){
 
     }
 
-    public void AttachProductToUser(){
+    public void AttachProductToUser(ProductMenu pM){
         
     }
 
-    public Product SelectProduct(){
+    public Product SelectProduct(ProductMenu pM, int UserType){
 
         return null;
     }
 
-    public void productOperation(){
+    public void productOperation(ProductMenu pM){
 
     }
 }
