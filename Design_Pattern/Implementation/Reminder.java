@@ -1,4 +1,9 @@
-public abstract class Reminder {
-    
-    public abstract Reminder accept(NodeVisitor NV);
+public class Reminder {
+
+
+    public Reminder accept(NodeVisitor NV){
+
+        return null;
+    }
+
 }

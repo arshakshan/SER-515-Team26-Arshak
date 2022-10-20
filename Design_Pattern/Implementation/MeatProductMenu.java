@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class MeatProductMenu implements ProductMenu{
 
+    ClassProductList meatProductList = null;
+    MeatProductMenu(){
+
+    }
     @Override
     public void showMenu() {
         // TODO Auto-generated method stub
@@ -55,5 +59,10 @@ public class MeatProductMenu implements ProductMenu{
         // TODO Auto-generated method stub
         System.out.println("Show Comboxes");
     }
-    
+
+    @Override
+    public void selectProduct(int UserType) {
+
+    }
+
 }

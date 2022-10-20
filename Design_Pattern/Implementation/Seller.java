@@ -18,5 +18,10 @@ public class Seller extends Person {
         // TODO Auto-generated method stub
         return null;
     }
-    
+
+    public void SellerTradingMenu(TradingMenu tm){
+
+    }
+
+
 }

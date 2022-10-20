@@ -5,12 +5,14 @@ import java.util.Scanner;
 public class Login {
 
     int UserType;
+    String userName;
     public int login() throws FileNotFoundException {
         String username, password, user;
         File userInfo ;
         Scanner scan = new Scanner(System.in);
         System.out.println("enter the user Type: ");
         user = scan.next();
+
         if((user.equals("buyer")) || (user.equals("Buyer"))){
             UserType =0;
         }else{
@@ -18,6 +20,7 @@ public class Login {
         }
         System.out.println("enter the username: ");
         username = scan.next();
+        userName = username;
         System.out.println("enter the password");
         password = scan.next();
 

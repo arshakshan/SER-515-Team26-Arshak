@@ -29,31 +29,38 @@ public class ProduceProductMenu implements ProductMenu {
     @Override
     public void showAddButton() {
         // TODO Auto-generated method stub
-        
+        System.out.println("Show Add Button");
     }
 
     @Override
     public void showViewButton() {
         // TODO Auto-generated method stub
-        
+        System.out.println("Show View Button");
+
     }
 
     @Override
     public void showRadioButton() {
         // TODO Auto-generated method stub
-        
+        System.out.println("Show Radio Button");
     }
 
     @Override
     public void showLabels() {
         // TODO Auto-generated method stub
-        
+        System.out.println("Show Labels Button");
+
     }
 
     @Override
     public void showComboxes() {
         // TODO Auto-generated method stub
-        
+        System.out.println("Show Comboxes Button");
     }
-    
+
+    @Override
+    public void selectProduct(int UserType) {
+
+    }
+
 }

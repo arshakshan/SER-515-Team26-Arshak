@@ -3,27 +3,33 @@ import java.util.Iterator;
 public class OfferingIterator implements ListIterator {
 
     @Override
-    public boolean hasNext(Iterator iterator) {
+    public boolean HasNext(Iterator iterator) {
         // TODO Auto-generated method stub
-        return false;
+        return iterator.hasNext();
     }
 
     @Override
-    public Object next(Iterator iterator) {
+    public String Next(Iterator iterator) {
         // TODO Auto-generated method stub
-        return null;
+        if(this.HasNext(iterator)){
+            return (String)iterator.next();
+        }else{
+            return null;
+        }
     }
 
     @Override
     public void moveToHead(Iterator iterator) {
         // TODO Auto-generated method stub
-        
+        System.out.println("Head Moved....");
     }
 
     @Override
     public void remove(Iterator iterator) {
         // TODO Auto-generated method stub
-        
+        if(this.HasNext(iterator)){
+            iterator.next();
+        }
     }
     
 }
