@@ -3,7 +3,7 @@
 
 Design Pattern Assignment for SER 515
 
-Product Trading and Bidding System (**PTBS**) system has been implemented using Design Patterns. The srsc files are kept inside a folder called [Implementation](https://github.com/arshakshan/SER-515-Team26-Arshak/tree/main/Design_Pattern/Implementation) and the run the [Main Function](https://github.com/arshakshan/SER-515-Team26-Arshak/Design_Pattern/Implementations/Main.java)
+Product Trading and Bidding System (**PTBS**) system has been implemented using Design Patterns. The srsc files are kept inside a folder called [Implementation](https://github.com/arshakshan/SER-515-Team26-Arshak/tree/main/Design_Pattern/Implementation) and the run the [Main Function](https://github.com/arshakshan/SER-515-Team26-Arshak/blob/main/Design_Pattern/Implementation/Main.java)
 
 Problem Statement:
 -
