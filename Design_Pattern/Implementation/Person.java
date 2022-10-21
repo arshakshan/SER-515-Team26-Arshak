@@ -1,9 +1,9 @@
 
 public abstract class Person {
     ProductMenu theProductMenu;
-    ClassProductList prodList;
+    ClassProductList prodList = new ClassProductList();
     String userName;
-    public abstract ProductMenu createProductMenu();
+    public abstract ProductMenu createProductMenu(String pdt);
     Person(){
 
     }

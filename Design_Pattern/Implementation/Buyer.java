@@ -5,9 +5,10 @@ public class Buyer extends Person {
         super();
         String userName1 = super.userName;
     }
-
+    ProductMenu buyerProductMenu= null;
     Buyer(ProductMenu theProductMenu) {
         super(theProductMenu);
+        buyerProductMenu = theProductMenu;
     }
 
     @Override
@@ -18,9 +19,12 @@ public class Buyer extends Person {
     }
 
     @Override
-    public ProductMenu createProductMenu() {
+    public ProductMenu createProductMenu(String pdt) {
         // TODO Auto-generated method stub
-
+        if(pdt.equals("Meat"))
+            return new MeatProductMenu();
+        else if(pdt.equals("Produce"))
+            return new ProduceProductMenu();
         return null;
     }
 

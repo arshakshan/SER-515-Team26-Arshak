@@ -13,9 +13,9 @@ public class UserInfoItem {
 		Scanner sc = new Scanner(System.in);
 
 		if(userType==0)
-			file = new File("txt_files/BuyerInfo.txt");
+			file = new File("Design_Pattern/Implementation/txt_files/BuyerInfo.txt");
 		else if(userType==1)
-			file = new File("txt_files/SellerInfo.txt");
+			file = new File("Design_Pattern/Implementation/txt_files/SellerInfo.txt");
 
 		System.out.println("Enter a username: ");
 		username = sc.next();

@@ -10,7 +10,7 @@ public class Login {
         String username, password, user;
         File userInfo ;
         Scanner scan = new Scanner(System.in);
-        System.out.println("enter the user Type: ");
+        System.out.println("enter the user Type: Buyer or Seller");
         user = scan.next();
 
         if((user.equals("buyer")) || (user.equals("Buyer"))){
@@ -18,6 +18,8 @@ public class Login {
         }else{
             UserType =1;
         }
+
+//        System.out.println(UserType);
         System.out.println("enter the username: ");
         username = scan.next();
         userName = username;
@@ -25,9 +27,9 @@ public class Login {
         password = scan.next();
 
         if(UserType==0){
-            userInfo = new File("txt_files/BuyerInfo.txt");
+            userInfo = new File("Design_Pattern/Implementation/txt_files/BuyerInfo.txt");
         }else{
-            userInfo = new File("txt_files/SellerInfo.txt");
+            userInfo = new File("Design_Pattern/Implementation/txt_files/SellerInfo.txt");
         }
 
         Scanner fileScan = new Scanner(userInfo);
@@ -40,7 +42,7 @@ public class Login {
                 return UserType;
             }
         }
-        System.out.println("Try Again");
+//        System.out.println("Try Again");
         return -1;
     }
 

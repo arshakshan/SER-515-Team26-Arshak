@@ -4,10 +4,22 @@ import java.util.Scanner;
 
 public class ProduceProductMenu implements ProductMenu {
 
+    //The ProduceProductMenu would be created
+    ProduceProductMenu(){
+        System.out.println("\n********* Produce Product menu Created. Showing all produce products *********\n");
+        showMenu();
+        System.out.println("");
+        showAddButton();
+        showViewButton();
+        showRadioButton();
+        showLabels();
+        showComboxes();
+    }
+
     @Override
     public void showMenu() {
         // TODO Auto-generated method stub
-        File file = new File("txt_files/ProductInfo.txt");
+        File file = new File("Design_Pattern/Implementation/txt_files/ProductInfo.txt");
         Scanner sc;
         try {
             sc = new Scanner(file);
@@ -22,6 +34,7 @@ public class ProduceProductMenu implements ProductMenu {
             String[] temp = sc.nextLine().split(":");
             if(temp[0].toString().equals("Produce")){
                 System.out.println(counter + ". "+ temp[1].toString());
+                counter++;
             }
         }
     }
@@ -55,7 +68,7 @@ public class ProduceProductMenu implements ProductMenu {
     @Override
     public void showComboxes() {
         // TODO Auto-generated method stub
-        System.out.println("Show Comboxes Button");
+        System.out.println("Show Comboxes Button\n");
     }
 
     @Override

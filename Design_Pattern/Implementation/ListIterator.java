@@ -2,11 +2,11 @@ import java.util.Iterator;
 
 public interface ListIterator {
     
-    public abstract boolean HasNext(Iterator iterator);
+    public abstract boolean HasNext();
 
-    public abstract String Next(Iterator iterator);
+    public abstract Object Next();
 
-    public abstract void moveToHead(Iterator iterator);
+    public abstract void moveToHead();
 
-    public abstract void remove(Iterator iterator);
+    public abstract void remove();
 }

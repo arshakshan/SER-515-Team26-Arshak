@@ -2,33 +2,45 @@ import java.util.Iterator;
 
 public class OfferingIterator implements ListIterator {
 
-    @Override
-    public boolean HasNext(Iterator iterator) {
-        // TODO Auto-generated method stub
-        return iterator.hasNext();
-    }
+    OfferingList temp = new OfferingList();
+    int p;
 
+    OfferingIterator(OfferingList offeringList){
+        temp = offeringList;
+        p = 0;
+    }
     @Override
-    public String Next(Iterator iterator) {
+    public boolean HasNext() {
         // TODO Auto-generated method stub
-        if(this.HasNext(iterator)){
-            return (String)iterator.next();
-        }else{
-            return null;
+        if(p < temp.size()){
+            return true;
         }
+        return false;
     }
 
     @Override
-    public void moveToHead(Iterator iterator) {
+    public Object Next() {
+        // TODO Auto-generated method stub
+        if(HasNext())
+        {
+            Object content = temp.get(p);
+            p++;
+            return content;
+        }
+        return null;
+    }
+
+    @Override
+    public void moveToHead() {
         // TODO Auto-generated method stub
         System.out.println("Head Moved....");
     }
 
     @Override
-    public void remove(Iterator iterator) {
+    public void remove() {
         // TODO Auto-generated method stub
-        if(this.HasNext(iterator)){
-            iterator.next();
+        if (this.HasNext()) {
+            System.out.println("Remove Element");
         }
     }
     

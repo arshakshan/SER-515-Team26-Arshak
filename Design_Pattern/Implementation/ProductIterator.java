@@ -1,36 +1,52 @@
 import java.util.Iterator;
+import java.util.List;
 
 public class ProductIterator implements ListIterator {
 
+    ClassProductList temp;
+    int pos = 0;
+//    ProductIterator(ClassProductList cl){
+//        temp=cl;
+//        pos=0;
+//    }
     @Override
-    public boolean HasNext(Iterator iterator) {
+    public boolean HasNext() {
         // TODO Auto-generated method stub
-        return iterator.hasNext();
-    }
-
-    @Override
-    public String Next(Iterator iterator) {
-        // TODO Auto-generated method stub
-        if(this.HasNext(iterator))
-        {
-            return (String)iterator.next();
+        if(pos < temp.size()){
+//            System.out.println("pos value: "+pos+" isnide hasNext, temp size: "+temp.size());
+            return true;
         }else{
-            return null;
+            return false;
         }
+
     }
 
+
     @Override
-    public void moveToHead(Iterator iterator) {
+    public Object Next() {
+        // TODO Auto-generated method stub
+        if(this.HasNext())
+        {
+            Object content = temp.get(pos);
+            pos = pos+1;
+//            System.out.println("pos value: "+pos+" isnide hasNext, temp size: "+temp.size());
+            return content;
+        }
+        return null;
+    }
+
+
+    @Override
+    public void moveToHead() {
         // TODO Auto-generated method stub
         System.out.println("Head Moved....");
     }
 
     @Override
-    public void remove(Iterator iterator) {
+    public void remove() {
         // TODO Auto-generated method stub
-        if(this.HasNext(iterator)){
-            iterator.next();
+        if (this.HasNext()) {
+            System.out.println("Remove Element");
         }
     }
-    
 }

@@ -14,7 +14,7 @@ public class Seller extends Person {
     }
 
     @Override
-    public ProductMenu createProductMenu() {
+    public ProductMenu createProductMenu(String pdtType) {
         // TODO Auto-generated method stub
         return null;
     }

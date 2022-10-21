@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ClassProductList {
+public class ClassProductList extends ArrayList{
 
-    ArrayList<String> pdt = new ArrayList<>();
+    ArrayList<String> pdt;
+    Trading t = new Trading("Product");
     Product n= null;
 
     ClassProductList(){
@@ -11,20 +12,21 @@ public class ClassProductList {
     }
 
     public ClassProductList(ArrayList<String> allProducts) {
+
         pdt = allProducts;
     }
 
-    public Iterator createIterator() {
-        return this.pdt.iterator();
+
+    public void accept(NodeVisitor remind) {
+
+        int pos =0;
+        while(pos < this.size()) {
+            System.out.println("\nProduct Reminder for "+this.get(pos));
+            System.out.println("Visiting Product "+this.get(pos));
+            remind.visitProduct(this);
+            pos++;
+        }
     }
 
-    public Reminder accept(ReminderVisitor remind) {
-        System.out.println("Product List Reminder");
-        return remind.visitProduct(this.n);
-    }
 
-//    public ReminderVisitor accept(NodeVisitor visitor){
-//        System.out.println("Product List Reminder");
-//        return visitor.visitProduct(n);
-//    }
 }
